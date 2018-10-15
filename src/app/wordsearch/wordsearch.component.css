@@ -1,0 +1,37 @@
+div.results {
+}
+
+ul.resultscolumn {
+    font-family: monospace;
+    font-size: 16px;
+    color: blue;
+    
+    margin: 0px;
+    padding-left: 15px;
+    list-style-type: none;
+    box-sizing: border-box;
+    width: 100%;
+    float: left;
+}
+
+@media only screen and (min-width: 510px) {
+    ul.resultscolumn {
+        width: 50%;
+    }
+}
+
+@media only screen and (min-width: 765px) {
+    ul.resultscolumn {
+        width: 33%;
+    }
+}
+
+div.results::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+span.more {
+    padding-left: 5px;
+}

@@ -1,0 +1,38 @@
+<div *ngIf="loading">
+  Loading dictionary...
+</div>
+
+<div *ngIf="loadError">
+  Error loading dictionary, sorry.
+</div>
+
+<div *ngIf="loaded">
+  <label>Must use: <input type="text" [formControl]="searchInput"/></label><br/>
+  <label>May use: <input type="text" [formControl]="additionalInput"/> (blank=any)</label><br/>
+
+<div *ngIf="showSearchResults">
+  <h2>Words containing {{ searchLetters }}<span *ngIf="additionalLetters.length > 0">, using optional letters {{ additionalLetters }}</span>:</h2>
+
+  <div *ngIf="columns.length > 0" class="results">
+    <ul *ngFor="let c of columns" class="resultscolumn">
+      <li *ngFor="let w of searchResults.words | slice:c.start:c.end">{{ w }}</li>
+    </ul>
+  </div>
+
+  <div *ngIf="searchResults.words.length == 0">
+    No words found.
+  </div>
+
+  <div *ngIf="searchResults.words.length > 0">
+    <p>{{ searchResults.words.length }} words found, {{ numWordsToShow }} displayed.</p>
+    <p>
+      <span *ngIf="moreAvailable > 0">Show more words: </span>
+      <span *ngIf="moreAvailable >= 20" class="more"><a (click)="moreWords(20)" href="#">20</a></span>
+      <span *ngIf="moreAvailable >= 100" class="more"><a (click)="moreWords(100)" href="#">100</a></span>
+      <span *ngIf="moreAvailable >= 500" class="more"><a (click)="moreWords(500)" href="#">500</a></span>
+      <span *ngIf="moreAvailable > 0" class="more"><a (click)="moreWords(-1)" href="#">all</a> </span>
+  </div>
+  <p>
+    Search took {{ searchResults.time | number }} milliseconds.
+  </p>
+</div>
