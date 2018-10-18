@@ -14,6 +14,7 @@ export interface Dictionary {
 export class DictionaryService {
   constructor(private http: HttpClient) { }
 
+  //dictionaryUrl = "assets/dictionary.json.notpresent";
   dictionaryUrl = "assets/dictionary.json";
 
   getDictionary() {
