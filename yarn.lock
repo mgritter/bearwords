@@ -188,10 +188,10 @@
   dependencies:
     tslib "^1.9.0"
 
-"@angular/http@^6.1.0":
-  version "6.1.9"
-  resolved "https://registry.yarnpkg.com/@angular/http/-/http-6.1.9.tgz#241f35207d62f86bc155feb124a1e73515d66fb6"
-  integrity sha512-Tm6SA7QIKGT4Bb+xlyPG+ZXrwniNwF+/ejsKcBar8xaligW4+R9oo5Ql6t4HpjafkWIPLBEXyxaiVq1nWPyz7g==
+"@angular/http@^7.2.16":
+  version "7.2.16"
+  resolved "https://registry.yarnpkg.com/@angular/http/-/http-7.2.16.tgz#f05337dd56faa86ce05b0dc378218a00fb337040"
+  integrity sha512-yvjbNyzFSmmz4UTjCdy5M8mk0cZqf9TvSf8yN5UVIwtw4joyuUdlgJCuin0qSbQOKIf/JjHoofpO2JkPCGSNww==
   dependencies:
     tslib "^1.9.0"
 
