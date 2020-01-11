@@ -5,6 +5,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { WordsearchComponent } from './wordsearch/wordsearch.component';
+import { DictionaryService } from './dictionary.service';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,7 @@ import { WordsearchComponent } from './wordsearch/wordsearch.component';
     HttpClientModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [DictionaryService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
